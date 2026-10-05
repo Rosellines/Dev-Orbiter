@@ -1,0 +1,12 @@
+{
+  "name": "dev-ember-profiles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Orbiter Ember \u2014 motion-rich neumorphic developer profile wall with GitHub metadata enrichment.",
+  "scripts": {
+    "build": "node scripts/build-data.mjs && node scripts/enrich-github.mjs",
+    "validate": "node scripts/build-data.mjs",
+    "build:base": "node scripts/build-data.mjs",
+    "enrich": "node scripts/enrich-github.mjs"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Sofia Chen",
+  "github": "octocat",
+  "role": "Product Engineer",
+  "avatar": "https://github.com/octocat.png?size=160",
+  "bio": "Turning product questions into small, testable interfaces with delightful feedback loops.",
+  "skills": [
+    "React",
+    "TypeScript",
+    "Product",
+    "UX",
+    "APIs"
+  ],
+  "building": "a zero-friction onboarding flow",
+  "links": {
+    "GitHub": "https://github.com/octocat"
+  },
+  "projects": [
+    {
+      "name": "Hello World",
+      "url": "https://github.com/octocat/Hello-World",
+      "kind": "Demo"
+    }
+  ],
+  "joinedAt": "2026-09-01",
+  "isDemo": true
+}

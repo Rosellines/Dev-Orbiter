@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-09-14T06:19:18.948Z",
+  "merges": [
+    {
+      "number": null,
+      "title": "Akira Demo joined the board",
+      "url": "contributors.html?profile=akira-demo",
+      "mergedAt": "2026-09-11T00:00:00Z",
+      "author": "akira-demo",
+      "kind": "PROFILE MERGE"
+    },
+    {
+      "number": null,
+      "title": "Noah Demo joined the board",
+      "url": "contributors.html?profile=noah-demo",
+      "mergedAt": "2026-09-10T00:00:00Z",
+      "author": "noah-demo",
+      "kind": "PROFILE MERGE"
+    },
+    {
+      "number": null,
+      "title": "Maya Demo joined the board",
+      "url": "contributors.html?profile=maya-demo",
+      "mergedAt": "2026-09-09T00:00:00Z",
+      "author": "maya-demo",
+      "kind": "PROFILE MERGE"
+    },
+    {
+      "number": null,
+      "title": "Ada Lovelace joined the board",
+      "url": "contributors.html?profile=ada-demo",
+      "mergedAt": "2026-09-05T00:00:00Z",
+      "author": "ada-demo",
+      "kind": "PROFILE MERGE"
+    },
+    {
+      "number": null,
+      "title": "Linus Demo joined the board",
+      "url": "contributors.html?profile=torvalds",
+      "mergedAt": "2026-09-03T00:00:00Z",
+      "author": "torvalds",
+      "kind": "PROFILE MERGE"
+    }
+  ],
+  "lastMerged": null
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Linus Demo",
+  "github": "torvalds",
+  "role": "Systems Builder",
+  "avatar": "https://avatars.githubusercontent.com/u/1024025?v=4",
+  "bio": "Thinking in primitives, shipping useful things, and keeping interfaces brutally clear.",
+  "skills": [
+    "C",
+    "Linux",
+    "Systems",
+    "Git",
+    "Open Source"
+  ],
+  "building": "a better workflow",
+  "links": {
+    "GitHub": "https://github.com/torvalds"
+  },
+  "projects": [
+    {
+      "name": "Kernel",
+      "url": "https://github.com/torvalds/linux",
+      "kind": "Repository"
+    }
+  ],
+  "joinedAt": "2026-09-03",
+  "isDemo": true
+}

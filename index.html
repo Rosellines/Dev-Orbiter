@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EmberBoard — a tactile, animated developer community wall powered by GitHub profile contributions.">
+  <meta name="theme-color" content="#161719">
+  <title>EmberBoard — Dev Profiles</title>
+  <link rel="icon" href="https://img.icons8.com/?id=pObterTJr68n&amp;format=png&amp;size=48">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem("ember-theme")||"dark";document.documentElement.dataset.motion=localStorage.getItem("ember-motion")||"full"}catch(e){}</script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-orb" id="cursorOrb" aria-hidden="true"></div><div class="orbit-trail" id="orbitTrail" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header shell">
+    <a class="brand pressable" href="#top" aria-label="EmberBoard home">
+      <span class="brand-mark"><img src="https://img.icons8.com/?size=100&amp;id=XsXWFF5ITuI8&amp;format=png&amp;color=FD7E14" alt="Orbit icon" loading="lazy"></span>
+      <span><b>ORBITER EMBER</b><small>BOARD / DEV PROFILES</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-link" href="#profiles">Latest</a>
+      <a class="nav-link" href="contributors.html">Contributors</a>
+      <a class="nav-link" href="#how">How it works</a>
+      <a class="nav-link" id="repoLink" href="#repository" target="_blank" rel="noreferrer" hidden>Repository ↗</a>
+      <label class="switch sw-11" title="Toggle color theme"><input id="themeToggle" type="checkbox" aria-label="Toggle color theme"><span class="track"><span class="thumb"></span></span></label><button class="motion-toggle pressable" id="motionToggle" type="button" aria-label="Motion mode: full" title="Motion mode">FX</button>
+      <button class="menu-btn pressable" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="background-orbits" aria-hidden="true">
+      <span class="bg-orbit bg-orbit-1"></span>
+      <span class="bg-orbit bg-orbit-2"></span>
+      <span class="bg-orbit bg-orbit-3"></span>
+      <span class="bg-orbit-dot bg-dot-1"></span>
+      <span class="bg-orbit-dot bg-dot-2"></span>
+      <span class="bg-orbit-dot bg-dot-3"></span>
+      <span class="bg-orbit-dot bg-dot-4"></span>
+      <svg class="bg-flight-system" viewBox="0 0 1600 1000" preserveAspectRatio="none">
+        <defs>
+          <ellipse id="bgFlightA" cx="800" cy="500" rx="700" ry="185" transform="rotate(11 800 500)"></ellipse>
+          <ellipse id="bgFlightB" cx="800" cy="500" rx="560" ry="135" transform="rotate(-24 800 500)"></ellipse>
+          <ellipse id="bgFlightC" cx="800" cy="500" rx="430" ry="255" transform="rotate(64 800 500)"></ellipse>
+        </defs>
+        <ellipse class="bg-flight-line bg-flight-line-a" cx="800" cy="500" rx="700" ry="185" transform="rotate(11 800 500)"></ellipse>
+        <ellipse class="bg-flight-line bg-flight-line-b" cx="800" cy="500" rx="560" ry="135" transform="rotate(-24 800 500)"></ellipse>
+        <ellipse class="bg-flight-line bg-flight-line-c" cx="800" cy="500" rx="430" ry="255" transform="rotate(64 800 500)"></ellipse>
+        <g class="bg-flight-body bg-flight-body-a"><circle r="7"></circle><circle r="2.5" cy="-9"></circle><animateMotion dur="18s" repeatCount="indefinite"><mpath href="#bgFlightA"></mpath></animateMotion></g>
+        <g class="bg-flight-body bg-flight-body-b"><circle r="5"></circle><rect x="-2.5" y="-16" width="5" height="5" rx="1"></rect><animateMotion dur="23s" begin="-7s" repeatCount="indefinite"><mpath href="#bgFlightB"></mpath></animateMotion></g>
+        <g class="bg-flight-body bg-flight-body-c"><circle r="6"></circle><circle r="2" cx="10" cy="0"></circle><animateMotion dur="27s" begin="-13s" repeatCount="indefinite"><mpath href="#bgFlightC"></mpath></animateMotion></g>
+        <g class="bg-flight-body bg-flight-body-d"><circle r="3.5"></circle><animateMotion dur="15s" begin="-4s" repeatCount="indefinite"><mpath href="#bgFlightC"></mpath></animateMotion></g>
+      </svg>
+      <span class="bg-flyer bg-flyer-a"></span>
+      <span class="bg-flyer bg-flyer-b"></span>
+      <span class="bg-flyer bg-flyer-c"></span>
+      <span class="bg-flyer bg-flyer-d"></span>
+      <span class="bg-planet bg-planet-a" aria-hidden="true"></span>
+      <span class="bg-planet bg-planet-b" aria-hidden="true"></span>
+      <span class="bg-planet bg-planet-c" aria-hidden="true"></span>
+    </div>
+    <section class="hero shell section-pad">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> COMMUNITY PROFILE WALL <span class="slash">//</span> SYNCED DATA</div>
+        <h1><span class="fx-typewriter" aria-label="Code has a face">CODE HAS A FACE</span><br><span class="accent-text"> DEV PROFILES</span></h1>
+        <p class="hero-lede">A tactile developer directory where every merged contribution becomes a living profile card. Built to feel soft, physical, playful — and unmistakably open source.</p>
+        <div class="hero-actions">
+          <span class="beam-action"><a class="btn btn-accent magnetic pressable hero-explore" href="#profiles"><span>Explore profiles</span><i>↘</i></a></span>
+          <span class="beam-action"><a class="btn btn-soft magnetic pressable" href="#how"><span>Add yours</span><i>＋</i></a></span>
+        </div>
+        <div class="hero-hint"><span class="kbd">/</span> search <span class="dot-sep">·</span><span class="kbd">T</span> theme <span class="dot-sep">·</span> <span class="kbd">Esc</span> close</div>
+        <div class="hero-signal" aria-label="Live community telemetry"><span><b id="heroProfiles">0</b> PROFILES</span><span><b id="heroSkills">0</b> SKILLS</span><span class="hero-signal-live"><i></i> WALL ONLINE</span></div>
+      </div>
+
+      <div class="hero-stage reveal delay-1" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="float-chip chip-a">MERGED</div>
+        <div class="float-chip chip-b">PR #182</div>
+        <div class="float-chip chip-c" id="heroSkillsChip">SKILLS SYNCED</div>
+        <article class="hero-device tilt-card">
+          <div class="device-top"><span></span><span></span><span></span><small>EMBER / 2026</small></div>
+          <div class="mini-avatar avatar-ring"><img src="https://img.icons8.com/?size=100&amp;id=wqGmdISvpm0c&amp;format=png&amp;color=FD7E14" alt="GitHub icon" loading="lazy"></div>
+          <div class="mini-line w-70"></div><div class="mini-line w-45"></div>
+          <div class="mini-tags"><b>JavaScript</b><b>Design Systems</b><b>Open Source</b></div>
+          <div class="device-mini-object" aria-hidden="true"><span></span><i></i><b></b></div>
+          <div class="mini-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="device-status"><span class="device-status-dot"></span> LIVE CONTRIBUTION STREAM <b>SYNC</b></div>
+          <div class="device-orb device-orb-a" aria-hidden="true"></div>
+          <div class="device-orb device-orb-b" aria-hidden="true"></div>
+          <div class="scramble" id="scrambleText">GITHUB CONTRIBUTOR</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="profiles-section shell section-pad" id="profiles">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">01 / LATEST DROPS</div><h2>Meet the newest <span class="accent-text">makers.</span></h2></div>
+        <span class="beam-action"><a class="filter-pill pressable" href="contributors.html">View all contributors ↗</a></span>
+        <span class="beam-action"><button class="filter-pill pressable" id="filterToggle" type="button" aria-expanded="false" aria-controls="skillFilter">All skills <span aria-hidden="true">⌄</span></button></span>
+      </div>
+
+      <div class="toolbar reveal">
+        <label class="search-field">
+          <span>⌕</span><input id="searchInput" type="search" autocomplete="off" placeholder="Search name, skill, role, handle…"><kbd>/</kbd><button class="search-clear" id="searchClear" type="button" aria-label="Clear search" hidden>×</button>
+        </label>
+        <div class="toolbar-meta"><span id="resultCount">0 profiles</span><span>Newest first</span></div>
+      </div>
+      <div class="skill-filter hidden" id="skillFilter"></div>
+      <div class="profile-grid loading" id="profileGrid" aria-live="polite" aria-busy="true"></div><div class="pager beam" id="latestPager"></div>
+      <div class="empty-state hidden" id="emptyState"><div class="empty-icon">◎</div><h3>No match in the ember.</h3><p>Try another name, handle, or skill.</p></div>
+    </section>
+
+    <section class="stats shell" aria-label="Community statistics">
+      <div class="stat-card pressable"><small>PROFILES</small><strong id="statProfiles">0</strong><span>people in the wall</span></div>
+      <div class="stat-card pressable"><small>SKILLS</small><strong id="statSkills">0</strong><span>unique skills tagged</span></div>
+      <div class="stat-card pressable"><small>CONTRIBUTORS</small><strong id="statContributors">0</strong><span>merged profiles</span></div>
+      <div class="stat-card pressable"><small>VIBE</small><strong>100<span>%</span></strong><span>bounce enabled</span></div>
+    </section>
+
+    <section class="merge-live shell section-pad" id="liveMerge" aria-labelledby="liveMergeTitle">
+      <div class="section-head reveal"><div><div class="eyebrow">03 / LIVE MERGE</div><h2 id="liveMergeTitle">The wall <span class="accent-text">remembers.</span></h2></div><span class="neon merge-live-badge" id="mergeFeedBadge">PROFILE FEED</span></div>
+      <div class="merge-timeline" id="mergeTimeline" aria-live="polite"></div>
+    </section>
+
+    <section class="how shell section-pad" id="how">
+      <div class="section-head reveal"><div><div class="eyebrow">02 / THE LOOP</div><h2>Commit → <span class="accent-text">profile.</span></h2></div></div>
+      <div class="loop-grid">
+        <article class="loop-card reveal pressable"><span>01</span><div class="loop-icon">⑂</div><h3>Follow &amp; Fork</h3><p>Copy the repo and open a small profile file inside <code>data/profiles/</code>.</p></article>
+        <article class="loop-card reveal delay-1 pressable"><span>02</span><div class="loop-icon">✎</div><h3>Describe</h3><p>Add your name, avatar, skills, links, bio and one “currently building” line.</p></article>
+        <article class="loop-card reveal delay-2 pressable"><span>03</span><div class="loop-icon">↗</div><h3>PR</h3><p>Push your branch and open a pull request. Automated checks validate the profile shape.</p></article>
+        <article class="loop-card reveal delay-3 pressable"><span>04</span><div class="loop-icon">✦</div><h3>Merger &amp; Stars</h3><p>Once merged, the deploy pipeline rebuilds the wall and your card appears automatically.</p></article>
+      </div>
+      <div class="cta-panel reveal">
+        <div><small>READY TO JOIN?</small><h3>Become a tile on the wall.</h3><p>No framework to learn. Just a tiny JSON profile and a good README contribution.</p></div>
+        <span class="beam-action"><a class="btn btn-accent magnetic pressable contribution-guide" href="CONTRIBUTING.md" target="_blank" rel="noreferrer"><span>Open contribution guide</span><i>↗</i></a></span>
+      </div>
+    </section>
+  <div class="join-banner hidden" id="joinBanner" role="status"></div>
+  </main>
+
+  <footer class="footer shell">
+    <div><b>ORBITER-EMBER BOARD</b><span>soft UI / hard commits</span></div>
+    <div>Built for people who ship.</div>
+  </footer>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#profiles">Latest</a><a href="contributors.html">Contributors</a><a href="#how">How it works</a><a id="mobileRepoLink" data-repo-link href="#repository" target="_blank" rel="noreferrer" hidden>Repository ↗</a>
+  </div>
+
+  <div class="modal-backdrop hidden" id="profileModal" role="presentation" aria-hidden="true">
+    <section class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="modal-close icon-btn pressable" id="modalClose" type="button" aria-label="Close profile">×</button>
+      <div id="modalBody"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

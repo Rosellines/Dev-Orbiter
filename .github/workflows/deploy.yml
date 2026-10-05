@@ -1,0 +1,57 @@
+name: Deploy Orbiter Ember
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'contributors.html'
+      - 'styles.css'
+      - 'app.js'
+      - 'contributors.js'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'CONTRIBUTING.md'
+      - '404.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate profile manifest and public GitHub metadata
+        run: npm run build
+      - name: Prepare static site
+        run: |
+          rm -rf _site
+          mkdir -p _site/data _site/assets
+          cp index.html contributors.html styles.css app.js contributors.js 404.html CONTRIBUTING.md _site/
+          cp -r assets/. _site/assets/
+          cp data/profiles.json data/site.json data/community.json _site/data/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

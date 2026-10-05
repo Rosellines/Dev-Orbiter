@@ -1,0 +1,10 @@
+{
+  "brand": "ORBITER EMBER",
+  "repositoryUrl": null,
+  "contributionGuideUrl": "CONTRIBUTING.md",
+  "generatedAt": "2026-09-14T06:19:18.948Z",
+  "enrichment": {
+    "enabled": false,
+    "source": "GitHub REST public API; public activity only"
+  }
+}

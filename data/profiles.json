@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Akira Demo",
+    "github": "akira-demo",
+    "role": "AI Interface Builder",
+    "avatar": "https://avatars.githubusercontent.com/u/9919?v=4",
+    "bio": "Designing expressive AI tools with tactile interfaces, fast feedback, and a little chaos.",
+    "skills": [
+      "AI",
+      "TypeScript",
+      "React",
+      "Motion",
+      "Open Source"
+    ],
+    "building": "an embodied AI dashboard",
+    "links": {
+      "GitHub": "https://github.com/akira-demo"
+    },
+    "projects": [
+      {
+        "name": "Ember AI UI",
+        "url": "https://github.com/akira-demo",
+        "kind": "Experiment"
+      }
+    ],
+    "joinedAt": "2026-09-11",
+    "isDemo": true
+  },
+  {
+    "name": "Noah Demo",
+    "github": "noah-demo",
+    "role": "Full-Stack Engineer",
+    "avatar": "https://avatars.githubusercontent.com/u/583231?v=4",
+    "bio": "Shipping tiny tools that feel polished, useful, and slightly addictive to use.",
+    "skills": [
+      "Node.js",
+      "Next.js",
+      "PostgreSQL",
+      "APIs",
+      "Open Source"
+    ],
+    "building": "a collaborative dev notebook",
+    "links": {
+      "GitHub": "https://github.com/noah-demo"
+    },
+    "projects": [
+      {
+        "name": "Ember Notes",
+        "url": "https://github.com/noah-demo",
+        "kind": "Web App"
+      }
+    ],
+    "joinedAt": "2026-09-10",
+    "isDemo": true
+  },
+  {
+    "name": "Maya Demo",
+    "github": "maya-demo",
+    "role": "Product Designer",
+    "avatar": "https://avatars.githubusercontent.com/u/9919?v=4",
+    "bio": "Turning rough product ideas into systems that are clear, expressive, and human.",
+    "skills": [
+      "UX",
+      "Design Systems",
+      "Figma",
+      "Accessibility",
+      "Open Source"
+    ],
+    "building": "a component playground",
+    "links": {
+      "GitHub": "https://github.com/maya-demo"
+    },
+    "projects": [
+      {
+        "name": "Soft UI Kit",
+        "url": "https://github.com/maya-demo",
+        "kind": "Design System"
+      }
+    ],
+    "joinedAt": "2026-09-09",
+    "isDemo": true
+  },
+  {
+    "name": "Ada Lovelace",
+    "github": "ada-demo",
+    "role": "Creative Technologist",
+    "avatar": "https://avatars.githubusercontent.com/u/583231?v=4",
+    "bio": "Building playful interfaces where code, motion and community collide.",
+    "skills": [
+      "JavaScript",
+      "Design Systems",
+      "Motion",
+      "Open Source",
+      "Accessibility"
+    ],
+    "building": "a tiny interaction engine",
+    "links": {
+      "GitHub": "https://github.com/ada-demo"
+    },
+    "projects": [
+      {
+        "name": "Ember Motion Kit",
+        "url": "https://github.com/ada-demo",
+        "kind": "Toolkit"
+      }
+    ],
+    "joinedAt": "2026-09-05",
+    "isDemo": true
+  },
+  {
+    "name": "Linus Demo",
+    "github": "torvalds",
+    "role": "Systems Builder",
+    "avatar": "https://avatars.githubusercontent.com/u/1024025?v=4",
+    "bio": "Thinking in primitives, shipping useful things, and keeping interfaces brutally clear.",
+    "skills": [
+      "C",
+      "Linux",
+      "Systems",
+      "Git",
+      "Open Source"
+    ],
+    "building": "a better workflow",
+    "links": {
+      "GitHub": "https://github.com/torvalds"
+    },
+    "projects": [
+      {
+        "name": "Kernel",
+        "url": "https://github.com/torvalds/linux",
+        "kind": "Repository"
+      }
+    ],
+    "joinedAt": "2026-09-03",
+    "isDemo": true
+  },
+  {
+    "name": "Sofia Chen",
+    "github": "octocat",
+    "role": "Product Engineer",
+    "avatar": "https://github.com/octocat.png?size=160",
+    "bio": "Turning product questions into small, testable interfaces with delightful feedback loops.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Product",
+      "UX",
+      "APIs"
+    ],
+    "building": "a zero-friction onboarding flow",
+    "links": {
+      "GitHub": "https://github.com/octocat"
+    },
+    "projects": [
+      {
+        "name": "Hello World",
+        "url": "https://github.com/octocat/Hello-World",
+        "kind": "Demo"
+      }
+    ],
+    "joinedAt": "2026-09-01",
+    "isDemo": true
+  }
+]
