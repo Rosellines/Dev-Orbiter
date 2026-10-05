@@ -1,12 +1,10 @@
 {
-  "minimal": {
-    "name": "Keennan Ginandjar",
-    "github": "https://github.com/TilderX2",
-    "role": "Developer",
-    "bio": "A short line about what you build.",
-    "skills": [
-      "JavaScript",
-      "Open Source"
-    ]
-  }
+  "name": "Keenan Ginandjar",
+  "github": "TilderX2",
+  "role": "Developer",
+  "bio": "A short line about what you build.",
+  "skills": [
+    "JavaScript",
+    "Open Source"
+  ]
 }

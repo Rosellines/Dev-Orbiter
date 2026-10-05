@@ -1,0 +1,24 @@
+{
+  "name": "Prissa Senja",
+  "github": "https://github.com/Prissasenja",
+  "role": "Developer",
+  "avatar": "https://github.com/Prissasenja.png?size=160",
+  "bio": "A short line about what you build or care about.",
+  "skills": [
+    "JavaScript",
+    "Open Source",
+    "Your Skill"
+  ],
+  "building": "What you are currently building",
+  "links": {
+    "GitHub": "https://github.com/Prissasenja",
+    "LinkedIn": "https://www.linkedin.com/in/Prissasenja/"
+  },
+  "projects": [
+    {
+      "name": "My Project is Awesome",
+      "url": "https://github.com/Prissasenja/your-project",
+      "kind": "Project"
+    }
+  ]
+}
