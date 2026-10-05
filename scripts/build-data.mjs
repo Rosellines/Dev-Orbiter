@@ -9,6 +9,7 @@ const profilesDir=path.join(root,"data","profiles");
 const profilesOut=path.join(root,"data","profiles.json");
 const siteOut=path.join(root,"data","site.json");
 const communityOut=path.join(root,"data","community.json");
+const checkOnly=process.argv.includes('--check');
 const schema=await loadSchema(root);
 const files=(await fs.readdir(profilesDir)).filter(f=>f.endsWith('.json')&&!f.startsWith('_')).sort();
 const profiles=[];
@@ -47,6 +48,9 @@ for(const file of files){
   profiles.push(normalized);
 }
 profiles.sort((a,b)=>new Date(b.joinedAt)-new Date(a.joinedAt)||a.name.localeCompare(b.name));
+if(checkOnly){
+  console.log(`Validated ${profiles.length} profiles.`);
+}else{
 await fs.writeFile(profilesOut,JSON.stringify(profiles,null,2)+'\n');
 
 let repoUrl='';
@@ -73,3 +77,4 @@ const fallbackMerges=profiles.slice(0,5).map(p=>({number:null,title:`${p.name} j
 let community={generatedAt:site.generatedAt,merges:fallbackMerges,lastMerged:null};
 await fs.writeFile(communityOut,JSON.stringify(community,null,2)+'\n');
 console.log(`Built ${profiles.length} profiles -> ${path.relative(root,profilesOut)}`);
+}
