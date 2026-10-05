@@ -1,5 +1,36 @@
 {
-  "github": "your-github-handle",
-  "bio": "A short line about what you build or care about.",
-  "skills": ["JavaScript", "Open Source", "Your Skill"]
+  "minimal": {
+    "name": "Your Name",
+    "github": "your-github-handle",
+    "role": "Developer",
+    "bio": "A short line about what you build.",
+    "skills": [
+      "JavaScript",
+      "Open Source"
+    ]
+  },
+  "complete": {
+    "name": "Your Name",
+    "github": "your-github-handle",
+    "role": "Your Role",
+    "avatar": "https://github.com/your-github-handle.png?size=160",
+    "bio": "A short line about what you build or care about.",
+    "skills": [
+      "JavaScript",
+      "Open Source",
+      "Your Skill"
+    ],
+    "building": "What you are currently building",
+    "links": {
+      "GitHub": "https://github.com/your-github-handle",
+      "LinkedIn": "https://www.linkedin.com/in/your-github-handle/"
+    },
+    "projects": [
+      {
+        "name": "Your Project",
+        "url": "https://github.com/your-github-handle/your-project",
+        "kind": "Project"
+      }
+    ]
+  }
 }
